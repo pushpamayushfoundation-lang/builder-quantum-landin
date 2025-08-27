@@ -83,9 +83,9 @@ export default function Contact() {
                           Location
                         </h3>
                         <p className="text-gray-600">
-                          Your Address
+                          40,Action Area 1B
                           <br />
-                          City, State - PIN Code
+                          Kolkata
                           <br />
                           India
                         </p>
@@ -103,7 +103,7 @@ export default function Contact() {
                           Phone
                         </h3>
                         <p className="text-gray-600">
-                          +91 XXXXX XXXXX
+                          +91 8076151938
                           <br />
                           <span className="text-sm text-gray-500">
                             Call us for immediate assistance
