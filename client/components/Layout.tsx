@@ -165,8 +165,8 @@ export default function Layout({ children }: LayoutProps) {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <div className="space-y-2 text-gray-400">
-                <p>📍 Your Location</p>
-                <p>📞 Your Phone Number</p>
+                <p>📍 Kolkata</p>
+                <p>📞 8076151938</p>
                 <p>📧 contact@ayushfoundation.com</p>
                 <p>🕒 Mon-Fri: 9AM-6PM</p>
               </div>
