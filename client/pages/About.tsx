@@ -13,7 +13,8 @@ export default function About() {
             About Ayush Foundation
           </h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
-            Bridging the gap between traditional education and modern industry requirements
+            Bridging the gap between traditional education and modern industry
+            requirements
           </p>
         </div>
       </section>
@@ -27,8 +28,9 @@ export default function About() {
               Our Mission
             </h2>
             <blockquote className="text-2xl text-gray-700 italic font-light leading-relaxed">
-              "Ayush Foundation is dedicated to bridging the gap between traditional education 
-              and modern skills by preparing students for the real world."
+              "Ayush Foundation is dedicated to bridging the gap between
+              traditional education and modern skills by preparing students for
+              the real world."
             </blockquote>
           </div>
         </div>
@@ -43,8 +45,8 @@ export default function About() {
               Full Story Coming Soon
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We're preparing a comprehensive overview of our journey, team, and vision. 
-              Stay tuned for the complete Ayush Foundation story.
+              We're preparing a comprehensive overview of our journey, team, and
+              vision. Stay tuned for the complete Ayush Foundation story.
             </p>
           </div>
 
@@ -53,24 +55,39 @@ export default function About() {
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-6 text-center">
                 <Users className="w-12 h-12 text-brand-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Founder's Story</h3>
-                <p className="text-gray-600">Learn about Ayush's journey and vision for transforming education</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Founder's Story
+                </h3>
+                <p className="text-gray-600">
+                  Learn about Ayush's journey and vision for transforming
+                  education
+                </p>
               </CardContent>
             </Card>
 
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-6 text-center">
                 <BookOpen className="w-12 h-12 text-brand-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Our Approach</h3>
-                <p className="text-gray-600">Discover our unique methodology for practical skill development</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Our Approach
+                </h3>
+                <p className="text-gray-600">
+                  Discover our unique methodology for practical skill
+                  development
+                </p>
               </CardContent>
             </Card>
 
             <Card className="border-0 shadow-lg bg-white">
               <CardContent className="p-6 text-center">
                 <Lightbulb className="w-12 h-12 text-brand-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Future Vision</h3>
-                <p className="text-gray-600">Our plans for expanding into new technologies and opportunities</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Future Vision
+                </h3>
+                <p className="text-gray-600">
+                  Our plans for expanding into new technologies and
+                  opportunities
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -97,11 +114,10 @@ export default function About() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-brand-600 to-brand-800 rounded-lg p-8 text-white">
-            <h2 className="text-3xl font-bold mb-4">
-              Join Our Journey
-            </h2>
+            <h2 className="text-3xl font-bold mb-4">Join Our Journey</h2>
             <p className="text-xl text-blue-100 mb-6">
-              Be part of the movement to transform education and prepare students for tomorrow's challenges.
+              Be part of the movement to transform education and prepare
+              students for tomorrow's challenges.
             </p>
             <Button className="bg-white text-brand-700 hover:bg-gray-100">
               Get Involved

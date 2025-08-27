@@ -46,7 +46,7 @@ export default function Layout({ children }: LayoutProps) {
                     "text-sm font-medium transition-colors hover:text-brand-600",
                     location.pathname === item.href
                       ? "text-brand-600"
-                      : "text-gray-700"
+                      : "text-gray-700",
                   )}
                 >
                   {item.name}
@@ -86,7 +86,7 @@ export default function Layout({ children }: LayoutProps) {
                     "block px-3 py-2 text-base font-medium rounded-md transition-colors",
                     location.pathname === item.href
                       ? "text-brand-600 bg-brand-50"
-                      : "text-gray-700 hover:text-brand-600 hover:bg-gray-50"
+                      : "text-gray-700 hover:text-brand-600 hover:bg-gray-50",
                   )}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -119,7 +119,8 @@ export default function Layout({ children }: LayoutProps) {
                 <span className="text-xl font-bold">Ayush Foundation</span>
               </div>
               <p className="text-gray-300 mb-4">
-                Empowering students with skills for tomorrow. Bridging the gap between traditional education and modern industry requirements.
+                Empowering students with skills for tomorrow. Bridging the gap
+                between traditional education and modern industry requirements.
               </p>
               <div className="flex space-x-4">
                 <a
