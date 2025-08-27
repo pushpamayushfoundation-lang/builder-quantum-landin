@@ -57,6 +57,31 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Ayush Foundation brand colors
+        brand: {
+          50: "hsl(var(--brand-50))",
+          100: "hsl(var(--brand-100))",
+          200: "hsl(var(--brand-200))",
+          300: "hsl(var(--brand-300))",
+          400: "hsl(var(--brand-400))",
+          500: "hsl(var(--brand-500))",
+          600: "hsl(var(--brand-600))",
+          700: "hsl(var(--brand-700))",
+          800: "hsl(var(--brand-800))",
+          900: "hsl(var(--brand-900))",
+        },
+        orange: {
+          50: "hsl(var(--orange-50))",
+          100: "hsl(var(--orange-100))",
+          200: "hsl(var(--orange-200))",
+          300: "hsl(var(--orange-300))",
+          400: "hsl(var(--orange-400))",
+          500: "hsl(var(--orange-500))",
+          600: "hsl(var(--orange-600))",
+          700: "hsl(var(--orange-700))",
+          800: "hsl(var(--orange-800))",
+          900: "hsl(var(--orange-900))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -87,5 +112,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
