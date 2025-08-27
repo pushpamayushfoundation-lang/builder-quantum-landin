@@ -123,7 +123,7 @@ export default function Contact() {
                           Email
                         </h3>
                         <p className="text-gray-600">
-                          contact@ayushfoundation.com
+                          pushpam.ayushfoundation@gmail.com
                           <br />
                           <span className="text-sm text-gray-500">
                             We'll respond within 24 hours
