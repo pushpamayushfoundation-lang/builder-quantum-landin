@@ -8,54 +8,107 @@
     <meta name="title" content="Ayush Industrial | Center of Excellence in Automation & Industry 4.0" />
     <meta name="description" content="India's premier industrial training institute specializing in PLC, SCADA, Industrial Robotics, IIoT, and Advanced Additive Manufacturing." />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="theme-color" content="#0f172a" /> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/svg+xml" href="/Ayush.png" />
+    <meta name="theme-color" content="#0f172a" /> 
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <style>
-      /* Prevent layout shift and set industrial base color */
+      /* Industrial Base Styling */
       body {
         margin: 0;
         padding: 0;
         background-color: #0f172a; /* Slate 900 */
         font-family: 'Inter', sans-serif;
+        color: #f8fafc;
+        /* Subtle blueprint grid background */
+        background-image: 
+          linear-gradient(rgba(249, 115, 22, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(249, 115, 22, 0.05) 1px, transparent 1px);
+        background-size: 40px 40px;
       }
       
       #root {
         min-height: 100vh;
       }
 
-      /* Simple industrial loader for slow connections */
+      /* Advanced Industrial Loader */
       #initial-loader {
         position: fixed;
         inset: 0;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         background: #0f172a;
         z-index: 9999;
-        transition: opacity 0.5s ease-out;
+        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
-      .loader-bar {
-        width: 40px;
-        height: 4px;
-        background: #f97316; /* Orange 500 */
-        animation: loading 1.5s infinite ease-in-out;
+      .loader-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
       }
 
-      @keyframes loading {
-        0% { transform: scaleX(0.1); opacity: 0.5; }
-        50% { transform: scaleX(1.5); opacity: 1; }
-        100% { transform: scaleX(0.1); opacity: 0.5; }
+      /* Logo Animation */
+      .loader-logo {
+        width: 80px;
+        height: 80px;
+        opacity: 0.8;
+        filter: drop-shadow(0 0 15px rgba(249, 115, 22, 0.3));
+        animation: pulseLogo 2s infinite ease-in-out;
+      }
+
+      .loader-text {
+        color: #f97316;
+        font-size: 10px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.4em;
+        margin-left: 0.4em; /* Offset for letter spacing centering */
+      }
+
+      .loader-track {
+        width: 120px;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .loader-fill {
+        position: absolute;
+        width: 40%;
+        height: 100%;
+        background: #f97316;
+        animation: slideProgress 1.5s infinite ease-in-out;
+      }
+
+      @keyframes pulseLogo {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.05); opacity: 1; }
+      }
+
+      @keyframes slideProgress {
+        0% { left: -40%; }
+        100% { left: 100%; }
       }
     </style>
   </head>
 
   <body>
     <div id="initial-loader">
-      <div class="loader-bar"></div>
+      <div class="loader-container">
+        <img src="/logo.svg" alt="Ayush Industrial Logo" class="loader-logo" onerror="this.style.display='none'">
+        <div class="loader-text">Initializing Systems</div>
+        <div class="loader-track">
+          <div class="loader-fill"></div>
+        </div>
+      </div>
     </div>
 
     <div id="root"></div>
@@ -63,14 +116,23 @@
     <script type="module" src="/client/main.tsx"></script>
 
     <script>
-      // Remove loader once React hydration is likely starting
+      // Graceful removal of loader
       window.addEventListener('load', () => {
         const loader = document.getElementById('initial-loader');
         if (loader) {
           loader.style.opacity = '0';
-          setTimeout(() => loader.remove(), 500);
+          setTimeout(() => {
+            loader.style.display = 'none';
+            loader.remove();
+          }, 600);
         }
       });
+
+      // Backup timeout in case of script failure
+      setTimeout(() => {
+        const loader = document.getElementById('initial-loader');
+        if (loader) loader.style.opacity = '0';
+      }, 5000);
     </script>
   </body>
 </html>
