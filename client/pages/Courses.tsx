@@ -7,162 +7,107 @@ import {
   Users,
   Award,
   CheckCircle,
-  Printer,
-  Megaphone,
-  Share2,
+  Cpu,
+  Zap,
+  Radio,
   Cog,
   ArrowRight,
   BookOpen,
   Target,
   Lightbulb,
+  Factory,
 } from "lucide-react";
 
-export default function Courses() {
+export default function IndustrialCourses() {
   const courses = [
     {
       id: 1,
-      title: "3D Printing Mastery",
-      description:
-        "Comprehensive program covering 3D modeling fundamentals to advanced printing techniques",
-      longDescription:
-        "Dive into the world of additive manufacturing with our hands-on 3D printing course. Learn industry-standard software, understand different printing technologies, and work on real projects that showcase your skills.",
-      icon: Printer,
-      image:
-        "https://images.pexels.com/photos/7869239/pexels-photo-7869239.jpeg",
-      duration: "8 weeks",
-      level: "Beginner to Intermediate",
-      students: "50+ enrolled",
-      price: "₹12,000",
+      title: "Industrial Automation & PLC/SCADA",
+      description: "Comprehensive training on Siemens, Rockwell, and Mitsubishi automation ecosystems",
+      longDescription: "Master the brain of the modern factory. This course covers PLC programming (Ladder Logic, FBD), HMI design, and SCADA integration. You will learn to design, program, and troubleshoot automated control systems used in global manufacturing plants.",
+      icon: Cpu,
+      image: "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg", // Industrial PLC setup
+      duration: "12 weeks",
+      level: "Professional",
+      students: "120+ certified",
+      price: "₹35,000",
       features: [
-        "Introduction to 3D modeling with Fusion 360",
-        "Hands-on experience with FDM and SLA printers",
-        "Material science and printer maintenance",
-        "Design optimization for 3D printing",
-        "Project-based learning with real applications",
-        "Industry connections and internship opportunities",
+        "Advanced PLC Programming (TIA Portal, RSLogix)",
+        "SCADA Configuration & Data Acquisition",
+        "VFD & Servo Drive Integration",
+        "Control Panel Designing (EPLAN)",
+        "Industrial Communication Protocols (Profinet, Modbus)",
+        "Troubleshooting complex industrial faults",
       ],
-      skills: [
-        "3D Modeling",
-        "CAD Software",
-        "Printer Operation",
-        "Material Selection",
-        "Design Thinking",
-      ],
-      projects: [
-        "Custom phone case design",
-        "Functional mechanical parts",
-        "Architectural scale models",
-        "Prototyping for local businesses",
-      ],
+      skills: ["PLC Logic", "HMI Design", "Control Systems", "Industrial Networking", "Automation Architecture"],
+      projects: ["Automated Bottling Plant Simulation", "PID Control for Temperature Loops", "Remote SCADA Monitoring System"],
     },
     {
       id: 2,
-      title: "Public Speaking Excellence",
-      description:
-        "Transform your communication skills and build unshakeable confidence in public speaking",
-      longDescription:
-        "Overcome stage fright and become a confident speaker. This program combines proven techniques with practical exercises to help you communicate effectively in any situation.",
-      icon: Megaphone,
-      image:
-        "https://images.pexels.com/photos/8348462/pexels-photo-8348462.jpeg",
-      duration: "6 weeks",
-      level: "All Levels",
-      students: "100+ enrolled",
-      price: "₹8,000",
+      title: "Industry 4.0 & Industrial IoT (IIoT)",
+      description: "Bridging the gap between OT and IT for the Smart Factory revolution",
+      longDescription: "Learn how to implement the Fourth Industrial Revolution. This module focuses on connecting shop-floor machines to the cloud, predictive maintenance, and big data analytics in a manufacturing context.",
+      icon: Radio,
+      image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg", // Server/IoT visualization
+      duration: "10 weeks",
+      level: "Advanced",
+      students: "85+ enrolled",
+      price: "₹42,000",
+      isNew: true,
       features: [
-        "Confidence building exercises and techniques",
-        "Speech structure and storytelling methods",
-        "Voice modulation and body language training",
-        "Impromptu speaking and Q&A handling",
-        "Video analysis and personalized feedback",
-        "Group practice sessions and peer support",
+        "MQTT & OPC-UA Protocol Implementation",
+        "Cloud Integration (AWS IoT / Azure IoT Central)",
+        "Node-RED for Industrial Data Flow",
+        "Predictive Maintenance Algorithms",
+        "Cybersecurity in Industrial Control Systems",
+        "Smart Sensor Integration (IO-Link)",
       ],
-      skills: [
-        "Public Speaking",
-        "Presentation Skills",
-        "Storytelling",
-        "Voice Control",
-        "Stage Presence",
-      ],
-      projects: [
-        "Personal story presentation",
-        "Persuasive speech competition",
-        "Impromptu speaking challenges",
-        "Group debate participation",
-      ],
+      skills: ["Cloud Computing", "IIoT Architecture", "Data Analytics", "Cybersecurity", "API Integration"],
+      projects: ["Real-time OEE Dashboard", "Vibration-based Machine Health Monitor", "Cloud-linked Inventory Tracker"],
     },
     {
       id: 3,
-      title: "Social Media Marketing Pro",
-      description:
-        "Master modern digital marketing strategies and grow your online presence effectively",
-      longDescription:
-        "Learn to create compelling content, understand platform algorithms, and build engaged communities. Perfect for aspiring entrepreneurs and digital natives.",
-      icon: Share2,
-      image:
-        "https://images.pexels.com/photos/5905510/pexels-photo-5905510.jpeg",
-      duration: "10 weeks",
-      level: "Beginner to Advanced",
-      students: "80+ enrolled",
-      price: "₹15,000",
+      title: "Industrial Robotics & Cobots",
+      description: "Programming and deployment of 6-Axis Robotic Arms and Collaborative Robots",
+      longDescription: "Hands-on training with industrial robots (FANUC/ABB) and Cobots (Universal Robots). Learn path planning, gripper design, and safety systems for high-speed manufacturing lines.",
+      icon: Zap,
+      image: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg", // Robotic arm
+      duration: "14 weeks",
+      level: "Professional",
+      students: "60+ enrolled",
+      price: "₹55,000",
       features: [
-        "Instagram and YouTube growth strategies",
-        "Content creation with Canva and mobile tools",
-        "Video editing and storytelling techniques",
-        "Analytics and performance measurement",
-        "Influencer marketing and collaboration",
-        "Personal brand development",
+        "Robot Kinematics & Path Programming",
+        "End-of-Arm Tooling (EOAT) Design",
+        "Vision System Integration for Pick & Place",
+        "Collaborative Robot (Cobot) Safety Standards",
+        "Simulation using RoboGuide / RobotStudio",
+        "Preventive Maintenance of Robotic Cells",
       ],
-      skills: [
-        "Content Creation",
-        "Video Editing",
-        "Analytics",
-        "Brand Strategy",
-        "Community Building",
-      ],
-      projects: [
-        "Personal brand Instagram account",
-        "YouTube channel launch",
-        "Viral content campaign",
-        "Local business marketing project",
-      ],
+      skills: ["Robot Programming", "Kinematics", "Machine Vision", "Workcell Design", "Safety Protocols"],
+      projects: ["Automated Welding Cell Design", "Vision-guided Sorting System", "Human-Robot Collaboration Task"],
     },
     {
       id: 4,
-      title: "CNC & VMC Machine Training",
-      description:
-        "Master precision manufacturing with hands-on industrial machine training",
-      longDescription:
-        "Get ready for the future of manufacturing with comprehensive training on Computer Numerical Control and Vertical Machining Centers. Perfect preparation for industry careers.",
+      title: "Advanced CNC & Mechatronics",
+      description: "High-precision subtractive manufacturing and electromechanical system design",
+      longDescription: "Go beyond basic machine operation. This course integrates mechanical design (CAD/CAM) with electronic control, focusing on VMC, HMC, and multi-axis CNC programming for aerospace and automotive standards.",
       icon: Cog,
-      image:
-        "https://images.pexels.com/photos/9242839/pexels-photo-9242839.jpeg",
-      duration: "12 weeks",
-      level: "Beginner to Professional",
-      students: "30+ enrolled",
-      price: "₹25,000",
-      isNew: true,
+      image: "https://images.pexels.com/photos/9242839/pexels-photo-9242839.jpeg", // CNC Machine
+      duration: "16 weeks",
+      level: "Professional",
+      students: "45+ enrolled",
+      price: "₹48,000",
       features: [
-        "Fundamentals of precision machining",
-        "CNC programming and G-code basics",
-        "Safety protocols and machine operation",
-        "Quality control and measurement tools",
-        "Industry-standard practices and workflows",
-        "Direct placement assistance and internships",
+        "Advanced G-Code & M-Code Programming",
+        "Mastercam / NX CAM for Multi-axis Machining",
+        "Pneumatic & Hydraulic System Integration",
+        "Precision Measurement (CMM / Digital Metrology)",
+        "Tooling Selection & Optimization",
+        "Mechatronic System Troubleshooting",
       ],
-      skills: [
-        "CNC Programming",
-        "Machine Operation",
-        "Quality Control",
-        "Safety Protocols",
-        "Industrial Process",
-      ],
-      projects: [
-        "Precision component manufacturing",
-        "Custom tooling creation",
-        "Industrial automation basics",
-        "Real-world manufacturing project",
-      ],
+      skills: ["Multi-axis CNC", "CAM Programming", "Fluid Power", "Metrology", "Systems Integration"],
+      projects: ["Aerospace Component Machining", "Electro-Pneumatic Sorting Rig", "Custom Gearbox Assembly & Test"],
     },
   ];
 
@@ -174,64 +119,78 @@ export default function Courses() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-brand-600 to-brand-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Master the Skills of Tomorrow
+      <section className="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <Badge className="mb-4 bg-orange-500 hover:bg-orange-600 border-none">Industry 4.0 Center of Excellence</Badge>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
+            Engineering the <span className="text-orange-500">Autonomous</span> Future
           </h1>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
-            Our comprehensive courses are designed to bridge the gap between
-            traditional education and real-world industry requirements. Choose
-            your path to success.
+          <p className="text-xl mb-8 max-w-3xl mx-auto text-slate-300">
+            Professional-grade training in Industrial Automation, Robotics, and IIoT. 
+            Transition from a technician to an Automation Engineer with industry-certified curriculum.
           </p>
-          <Button
-            size="lg"
-            className="bg-white text-brand-700 hover:bg-gray-100"
-            onClick={scrollToEnroll}
-          >
-            Find Your Course
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button
+              size="lg"
+              className="bg-orange-500 text-white hover:bg-orange-600"
+              onClick={scrollToEnroll}
+            >
+              Explore Course Catalog
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-slate-900">
+              Download Industrial Prospectus
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* Course Cards */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+              <div className="max-w-2xl">
+                <h2 className="text-3xl font-bold text-slate-900">Industrial Training Modules</h2>
+                <p className="text-slate-600 mt-2">Specialized tracks designed in collaboration with manufacturing leaders.</p>
+              </div>
+              <div className="hidden md:flex gap-4">
+                <Badge variant="outline" className="py-2 px-4">PLC</Badge>
+                <Badge variant="outline" className="py-2 px-4">Robotics</Badge>
+                <Badge variant="outline" className="py-2 px-4">IIoT</Badge>
+              </div>
+           </div>
+          
           <div className="space-y-12">
             {courses.map((course, index) => (
               <Card
                 key={course.id}
-                className={`overflow-hidden border-0 shadow-xl ${index % 2 === 0 ? "" : "lg:flex-row-reverse"} lg:flex lg:items-center`}
+                className={`overflow-hidden border border-slate-100 shadow-2xl ${index % 2 === 0 ? "" : "lg:flex-row-reverse"} lg:flex lg:items-center`}
               >
                 <div className="lg:w-1/2">
-                  <div className="relative aspect-video lg:aspect-square overflow-hidden">
-                    {course.isNew && (
-                      <div className="absolute top-4 right-4 z-10">
-                        <Badge className="bg-gradient-to-r from-orange-500 to-orange-600 text-white">
-                          NEW!
-                        </Badge>
-                      </div>
-                    )}
+                  <div className="relative aspect-video lg:aspect-square overflow-hidden group">
                     <img
                       src={course.image}
                       alt={course.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
+                    <div className="absolute inset-0 bg-slate-900/40 mix-blend-multiply"></div>
                   </div>
                 </div>
 
-                <div className="lg:w-1/2 p-8">
+                <div className="lg:w-1/2 p-10">
                   <CardHeader className="px-0 pt-0">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-brand-500 to-brand-700 rounded-lg flex items-center justify-center mr-4">
-                        <course.icon className="w-6 h-6 text-white" />
+                      <div className="w-14 h-14 bg-slate-900 rounded-xl flex items-center justify-center mr-4 shadow-lg shadow-slate-200">
+                        <course.icon className="w-7 h-7 text-orange-400" />
                       </div>
                       <div>
-                        <CardTitle className="text-2xl font-bold text-gray-900">
+                        <CardTitle className="text-2xl font-bold text-slate-900">
                           {course.title}
                         </CardTitle>
-                        <p className="text-brand-600 font-medium">
+                        <p className="text-orange-600 font-semibold text-sm tracking-wider uppercase">
                           {course.description}
                         </p>
                       </div>
@@ -239,86 +198,47 @@ export default function Courses() {
                   </CardHeader>
 
                   <CardContent className="px-0">
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-slate-600 mb-6 leading-relaxed">
                       {course.longDescription}
                     </p>
 
-                    {/* Course Info */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                      <div className="text-center">
-                        <Clock className="w-5 h-5 text-brand-600 mx-auto mb-1" />
-                        <div className="text-sm font-medium text-gray-900">
-                          {course.duration}
-                        </div>
-                        <div className="text-xs text-gray-500">Duration</div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 bg-slate-50 p-4 rounded-lg">
+                      <div className="text-center border-r border-slate-200">
+                        <Clock className="w-5 h-5 text-slate-400 mx-auto mb-1" />
+                        <div className="text-sm font-bold text-slate-900">{course.duration}</div>
+                      </div>
+                      <div className="text-center border-r border-slate-200">
+                        <Target className="w-5 h-5 text-slate-400 mx-auto mb-1" />
+                        <div className="text-sm font-bold text-slate-900">{course.level}</div>
+                      </div>
+                      <div className="text-center border-r border-slate-200">
+                        <Users className="w-5 h-5 text-slate-400 mx-auto mb-1" />
+                        <div className="text-sm font-bold text-slate-900">{course.students}</div>
                       </div>
                       <div className="text-center">
-                        <BookOpen className="w-5 h-5 text-brand-600 mx-auto mb-1" />
-                        <div className="text-sm font-medium text-gray-900">
-                          {course.level}
-                        </div>
-                        <div className="text-xs text-gray-500">Level</div>
-                      </div>
-                      <div className="text-center">
-                        <Users className="w-5 h-5 text-brand-600 mx-auto mb-1" />
-                        <div className="text-sm font-medium text-gray-900">
-                          {course.students}
-                        </div>
-                        <div className="text-xs text-gray-500">Students</div>
-                      </div>
-                      <div className="text-center">
-                        <Award className="w-5 h-5 text-brand-600 mx-auto mb-1" />
-                        <div className="text-sm font-medium text-gray-900">
-                          {course.price}
-                        </div>
-                        <div className="text-xs text-gray-500">Investment</div>
+                        <Award className="w-5 h-5 text-slate-400 mx-auto mb-1" />
+                        <div className="text-sm font-bold text-slate-900">{course.price}</div>
                       </div>
                     </div>
 
-                    {/* Key Features */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                        <Target className="w-4 h-4 mr-2 text-brand-600" />
-                        What You'll Learn
-                      </h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        {course.features.slice(0, 4).map((feature, idx) => (
-                          <div
-                            key={idx}
-                            className="flex items-center text-sm text-gray-600"
-                          >
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <div className="mb-8">
+                      <h4 className="font-bold text-slate-900 mb-4 uppercase text-xs tracking-widest">Curriculum Highlights</h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 gap-x-6">
+                        {course.features.map((feature, idx) => (
+                          <div key={idx} className="flex items-start text-sm text-slate-600">
+                            <CheckCircle className="w-4 h-4 text-orange-500 mr-2 mt-0.5 flex-shrink-0" />
                             {feature}
                           </div>
                         ))}
                       </div>
                     </div>
 
-                    {/* Skills */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-gray-900 mb-3 flex items-center">
-                        <Lightbulb className="w-4 h-4 mr-2 text-brand-600" />
-                        Skills You'll Gain
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {course.skills.map((skill, idx) => (
-                          <Badge
-                            key={idx}
-                            variant="secondary"
-                            className="bg-brand-50 text-brand-700"
-                          >
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Button className="bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 flex-1">
-                        Enroll Now
+                    <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-slate-100">
+                      <Button className="bg-slate-900 text-white hover:bg-slate-800 flex-1 h-12">
+                        Enroll in Module
                       </Button>
-                      <Button variant="outline" className="flex-1">
-                        Learn More
+                      <Button variant="outline" className="flex-1 h-12 border-slate-200 text-slate-700">
+                        Technical Specs
                       </Button>
                     </div>
                   </CardContent>
@@ -329,96 +249,79 @@ export default function Courses() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Industrial Infrastructure Section */}
+      <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Ayush Foundation?
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Advanced Learning Ecosystem
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We're committed to providing practical, industry-relevant
-              education that prepares you for real success.
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Our lab facilities mirror actual industrial environments to ensure seamless transition to the shop floor.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center border-0 shadow-lg bg-white">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-brand-500 to-brand-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-white" />
+            <Card className="border-0 shadow-lg bg-white overflow-hidden">
+              <CardContent className="p-0">
+                <div className="h-2 bg-orange-500"></div>
+                <div className="p-8">
+                  <Factory className="w-12 h-12 text-slate-900 mb-6" />
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">Live Industrial Benchmarks</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Work on Siemens S7-1500 PLCs, FANUC Robots, and Festo Pneumatic kits—standard equipment used in Fortune 500 plants.
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Expert Instructors
-                </h3>
-                <p className="text-gray-600">
-                  Learn from industry professionals with years of practical
-                  experience in their fields.
-                </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 shadow-lg bg-white">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BookOpen className="w-8 h-8 text-white" />
+            <Card className="border-0 shadow-lg bg-white overflow-hidden">
+              <CardContent className="p-0">
+                <div className="h-2 bg-slate-900"></div>
+                <div className="p-8">
+                  <Cpu className="w-12 h-12 text-slate-900 mb-6" />
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">Digital Twin Integration</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Use simulation tools like Factory I/O and MATLAB/Simulink to design and test systems before physical deployment.
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Hands-on Learning
-                </h3>
-                <p className="text-gray-600">
-                  Practice with real equipment and work on projects that matter
-                  to build practical skills.
-                </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center border-0 shadow-lg bg-white">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8 text-white" />
+            <Card className="border-0 shadow-lg bg-white overflow-hidden">
+              <CardContent className="p-0">
+                <div className="h-2 bg-orange-500"></div>
+                <div className="p-8">
+                  <Award className="w-12 h-12 text-slate-900 mb-6" />
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">Professional Certification</h3>
+                  <p className="text-slate-600 leading-relaxed">
+                    Earn certifications recognized by major manufacturing hubs and automation OEMs worldwide.
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Career Support
-                </h3>
-                <p className="text-gray-600">
-                  Get placement assistance, internship opportunities, and
-                  industry connections.
-                </p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Enrollment CTA */}
-      <section
-        id="enroll"
-        className="py-20 bg-gradient-to-r from-brand-600 to-brand-800"
-      >
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Start Your Learning Journey?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Join our next batch and take the first step towards mastering skills
-            that will shape your future.
+      {/* Placement Section */}
+      <section id="enroll" className="py-20 bg-slate-900 text-white">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8">Ready for Industry 4.0?</h2>
+          <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
+            Join the elite group of automation professionals. Admissions are now open for the 2026 Advanced Industrial Cohort.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-brand-700 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
-            >
-              Enroll Today
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-12 h-14 text-lg">
+              Apply for Admission
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-brand-700 px-8 py-4 text-lg"
-            >
-              Schedule a Call
+            <Button size="lg" variant="outline" className="border-slate-700 text-white hover:bg-slate-800 px-12 h-14 text-lg">
+              Contact Career Counselor
             </Button>
           </div>
+          <p className="mt-8 text-slate-500 text-sm italic">
+            * Corporate training batches for industrial teams are also available upon request.
+          </p>
         </div>
       </section>
     </Layout>

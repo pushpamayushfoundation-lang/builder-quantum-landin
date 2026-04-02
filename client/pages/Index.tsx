@@ -4,71 +4,64 @@ import Layout from "@/components/Layout";
 import {
   ArrowRight,
   Users,
-  Award,
-  BookOpen,
-  Printer,
-  Megaphone,
-  Share2,
-  Cog,
-  Star,
+  Settings,
+  Cpu,
+  Factory,
+  Zap,
+  ShieldCheck,
   CheckCircle,
+  BarChart3,
+  Globe,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export default function Index() {
+export default function IndustrialIndex() {
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
     contactSection?.scrollIntoView({ behavior: "smooth" });
   };
 
   const stats = [
-    { number: "500+", label: "Students Trained", icon: Users },
-    { number: "10+", label: "Workshops Conducted", icon: BookOpen },
-    { number: "4", label: "Core Skill Programs", icon: Award },
+    { number: "1,200+", label: "Automation Engineers Trained", icon: Users },
+    { number: "50+", label: "Corporate Partners", icon: Factory },
+    { number: "ISO 9001", label: "Certified Training Standards", icon: ShieldCheck },
   ];
 
   const courses = [
     {
-      title: "3D Printing",
-      description:
-        "Learn 3D modeling, hands-on printing, and design-to-print pipeline",
-      icon: Printer,
-      image:
-        "https://images.pexels.com/photos/7869239/pexels-photo-7869239.jpeg",
+      title: "PLC & SCADA Systems",
+      description: "Master Siemens TIA Portal and Rockwell Automation for large-scale factory control.",
+      icon: Cpu,
+      image: "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg",
       features: [
-        "3D Modeling Basics",
-        "Hands-on with Printers",
-        "Design Pipeline",
+        "Ladder Logic & FBD",
+        "HMI/SCADA Integration",
+        "VFD Control Systems",
       ],
     },
     {
-      title: "Public Speaking",
-      description: "Build confidence, structure speeches, and improve fluency",
-      icon: Megaphone,
-      image:
-        "https://images.pexels.com/photos/8348462/pexels-photo-8348462.jpeg",
-      features: ["Confidence Building", "Speech Structure", "English Fluency"],
+      title: "Industrial IoT (IIoT)",
+      description: "Implementing Industry 4.0 protocols like MQTT, OPC-UA, and Cloud Analytics.",
+      icon: Globe,
+      image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg",
+      features: ["Cloud Data Logging", "Edge Computing", "Predictive Maintenance"],
     },
     {
-      title: "Social Media Marketing",
-      description:
-        "Master Instagram, YouTube, content creation and growth strategies",
-      icon: Share2,
-      image:
-        "https://images.pexels.com/photos/5905510/pexels-photo-5905510.jpeg",
-      features: ["Content Creation", "Platform Strategy", "Growth Hacking"],
+      title: "Robotics & Cobots",
+      description: "Programming 6-Axis FANUC arms and Universal Robots for automated assembly.",
+      icon: Zap,
+      image: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg",
+      features: ["Path Programming", "Vision Systems", "Safety Integration"],
     },
     {
-      title: "CNC & VMC Training",
-      description:
-        "Master precision machining, safety operations, and get industry exposure",
-      icon: Cog,
-      image:
-        "https://images.pexels.com/photos/9242839/pexels-photo-9242839.jpeg",
+      title: "Additive Manufacturing",
+      description: "Industrial 3D Printing (SLA/SLS) for rapid prototyping and functional parts.",
+      icon: Settings,
+      image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg",
       features: [
-        "Precision Machining",
-        "Safety Operations",
-        "Industry Exposure",
+        "Generative Design",
+        "Material Science",
+        "Post-Processing Tech",
       ],
       isNew: true,
     },
@@ -76,21 +69,21 @@ export default function Index() {
 
   const testimonials = [
     {
-      name: "Priya Sharma",
-      course: "3D Printing",
-      text: "The hands-on approach helped me understand complex concepts easily. Now I'm confident in 3D modeling!",
+      name: "Vikram Mehta",
+      course: "PLC Automation",
+      text: "The transition from electrical basics to PLC logic was seamless. I secured a role at a major automotive plant immediately after.",
       rating: 5,
     },
     {
-      name: "Rahul Verma",
-      course: "Public Speaking",
-      text: "I was shy before joining, but now I can speak confidently in front of large audiences. Life-changing!",
+      name: "Sandeep Rao",
+      course: "Robotics",
+      text: "Hands-on experience with actual FANUC arms made all the difference. This isn't just a course; it's a career shift.",
       rating: 5,
     },
     {
-      name: "Ananya Singh",
-      course: "Social Media Marketing",
-      text: "Learned practical strategies that I immediately applied. My content engagement increased by 300%!",
+      name: "Meera Iyer",
+      course: "Industry 4.0",
+      text: "Finally, a program that explains how to actually connect shop-floor machines to the cloud securely.",
       rating: 5,
     },
   ];
@@ -98,74 +91,73 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background with overlay */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
+        {/* Technical Grid Overlay */}
+        <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+        
+        {/* Background with darker industrial overlay */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30 z-10" />
+          <div className="absolute inset-0 bg-slate-900/80 z-10" />
           <img
-            src="https://images.pexels.com/photos/7869239/pexels-photo-7869239.jpeg"
-            alt="Students learning technology"
+            src="https://images.pexels.com/photos/3862632/pexels-photo-3862632.jpeg"
+            alt="Automated Production Line"
             className="w-full h-full object-cover"
           />
         </div>
 
         {/* Hero Content */}
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Empowering Students with
-            <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-              Skills for Tomorrow
+          <Badge className="mb-6 bg-orange-500 hover:bg-orange-500 text-slate-900 font-bold px-4 py-1">
+            2026 ADMISSIONS OPEN
+          </Badge>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tighter uppercase">
+            The Hub of
+            <span className="block text-orange-500">
+              Industrial Mastery
             </span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-200">
-            Upskilling 11th & 12th Grade Students in 3D Printing, Public
-            Speaking, Social Media Marketing, and Industrial Training.
+          <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-slate-300 font-medium">
+            Bridging the gap between engineering theory and Industry 4.0 reality. 
+            Advanced training in Automation, Robotics, and Smart Manufacturing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 text-lg"
+              className="bg-orange-500 hover:bg-orange-600 text-slate-900 font-bold px-10 py-7 text-xl rounded-none transition-all transform hover:scale-105"
               onClick={scrollToContact}
             >
-              Join Now
-              <ArrowRight className="ml-2 h-5 w-5" />
+              ENROLL IN MODULE
+              <ArrowRight className="ml-2 h-6 w-6" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg"
+              className="border-white/30 text-white hover:bg-white hover:text-slate-900 px-10 py-7 text-xl rounded-none backdrop-blur-sm"
               asChild
             >
-              <Link to="/courses">View Courses</Link>
+              <Link to="/courses">VIEW CURRICULUM</Link>
             </Button>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-          <div className="animate-bounce">
-            <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Stats Section with Industrial Styling */}
+      <section className="py-12 bg-slate-950 border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-brand-500 to-brand-700 rounded-full flex items-center justify-center">
-                    <stat.icon className="w-8 h-8 text-white" />
+              <div key={index} className="flex items-center space-x-6">
+                <div className="w-16 h-16 bg-slate-800 border border-orange-500/30 flex items-center justify-center flex-shrink-0">
+                  <stat.icon className="w-8 h-8 text-orange-500" />
+                </div>
+                <div>
+                  <div className="text-3xl font-black text-white leading-none mb-1">
+                    {stat.number}
+                  </div>
+                  <div className="text-xs uppercase tracking-widest text-slate-400 font-bold">
+                    {stat.label}
                   </div>
                 </div>
-                <div className="text-4xl font-bold text-gray-900 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -173,57 +165,51 @@ export default function Index() {
       </section>
 
       {/* Courses Preview Section */}
-      <section className="py-20">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Skill Programs
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Choose from our carefully designed programs to build the skills
-              that matter in today's world
-            </p>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="max-w-2xl text-left">
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tighter mb-4">
+                Core Training <span className="text-orange-500">Sectors</span>
+              </h2>
+              <p className="text-lg text-slate-600">
+                Aggressive, hands-on modules designed to produce ready-to-deploy Automation Professionals.
+              </p>
+            </div>
+            <Link to="/courses" className="text-orange-600 font-bold flex items-center hover:underline">
+              BROWSE ALL MODULES <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {courses.map((course, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-xl transition-all duration-300 border-0 bg-white overflow-hidden"
+                className="group border border-slate-100 bg-slate-50/50 rounded-none overflow-hidden transition-all duration-300 hover:border-orange-500"
               >
-                <div className="relative">
+                <div className="relative aspect-[4/3]">
                   {course.isNew && (
-                    <div className="absolute top-4 right-4 z-10">
-                      <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        NEW!
+                    <div className="absolute top-0 left-0 z-10">
+                      <span className="bg-orange-500 text-slate-900 px-4 py-1 text-xs font-black uppercase tracking-tighter">
+                        NEW SPEC
                       </span>
                     </div>
                   )}
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={course.image}
-                      alt={course.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
                 </div>
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-700 rounded-lg flex items-center justify-center mr-3">
-                      <course.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {course.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{course.description}</p>
-                  <ul className="space-y-2">
+                <CardContent className="p-8">
+                  <h3 className="text-xl font-black text-slate-900 uppercase mb-3 tracking-tighter">
+                    {course.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm mb-6 line-clamp-2">{course.description}</p>
+                  <ul className="space-y-3">
                     {course.features.map((feature, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-center text-sm text-gray-600"
-                      >
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      <li key={idx} className="flex items-center text-xs font-bold uppercase tracking-wide text-slate-500">
+                        <CheckCircle className="w-4 h-4 text-orange-500 mr-2" />
                         {feature}
                       </li>
                     ))}
@@ -232,60 +218,42 @@ export default function Index() {
               </Card>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800"
-              asChild
-            >
-              <Link to="/courses">
-                Explore All Courses
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What Our Students Say
-            </h2>
-            <p className="text-xl text-gray-600">
-              Real stories from students who transformed their futures
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white border-0 shadow-lg">
-                <CardContent className="p-6">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 text-yellow-500 fill-current"
-                      />
-                    ))}
-                  </div>
-                  <p className="text-gray-700 mb-4 italic">
-                    "{testimonial.text}"
-                  </p>
-                  <div>
-                    <div className="font-semibold text-gray-900">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-brand-600 text-sm">
-                      {testimonial.course} Student
+      {/* Industrial Advantage Section (Replacing simple testimonials) */}
+      <section className="py-24 bg-slate-900 text-white overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div>
+              <h2 className="text-4xl font-black uppercase tracking-tighter mb-8 leading-none">
+                The Ayush <span className="text-orange-500">Engineering</span> Advantage
+              </h2>
+              <div className="space-y-8">
+                {[
+                  { title: "Live Automation Lab", desc: "Train on active PLC benches and robotic cells, not just simulations.", icon: Settings },
+                  { title: "Industry 4.0 Standard", desc: "Our curriculum is audited annually to meet global smart-factory specs.", icon: BarChart3 },
+                  { title: "Placement Pipeline", desc: "Direct interview access to our network of 50+ manufacturing partners.", icon: Users },
+                ].map((item, i) => (
+                  <div key={i} className="flex space-x-6">
+                    <item.icon className="w-10 h-10 text-orange-500 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-lg font-bold uppercase mb-2">{item.title}</h4>
+                      <p className="text-slate-400 text-sm">{item.desc}</p>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                ))}
+              </div>
+            </div>
+            <div className="grid grid-cols-1 gap-6">
+              {testimonials.map((t, i) => (
+                <div key={i} className="bg-slate-800/50 p-8 border-l-4 border-orange-500">
+                  <p className="text-slate-300 italic mb-4">"{t.text}"</p>
+                  <div className="font-black uppercase tracking-tighter text-sm">{t.name}</div>
+                  <div className="text-orange-500 text-xs font-bold uppercase">{t.course} Alumnus</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -293,34 +261,43 @@ export default function Index() {
       {/* CTA Section */}
       <section
         id="contact"
-        className="py-20 bg-gradient-to-r from-brand-600 to-brand-800"
+        className="py-24 bg-orange-500"
       >
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Future?
+          <h2 className="text-4xl md:text-6xl font-black text-slate-950 mb-6 uppercase tracking-tighter">
+            Request Technical Prospectus
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Join hundreds of students who are already building skills for
-            tomorrow. Start your journey today!
+          <p className="text-xl text-slate-900 mb-10 font-medium">
+            Join the elite group of certified automation professionals. 
+            Corporate and individual training batches available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-white text-brand-700 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
+              className="bg-slate-900 text-white hover:bg-slate-800 px-12 py-7 text-xl font-black rounded-none"
             >
-              Enroll Now
+              APPLY NOW
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-brand-700 px-8 py-4 text-lg"
+              className="border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-12 py-7 text-xl font-black rounded-none"
               asChild
             >
-              <Link to="/contact">Contact Us</Link>
+              <Link to="/contact">TALK TO AN ENGINEER</Link>
             </Button>
           </div>
         </div>
       </section>
     </Layout>
+  );
+}
+
+// Simple Badge component if not available in your UI library
+function Badge({ children, className }: { children: React.ReactNode, className?: string }) {
+  return (
+    <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${className}`}>
+      {children}
+    </span>
   );
 }
